@@ -15,7 +15,7 @@
 	<div>
 		<form action="readUploadDocFile.html" method="post"  enctype="multipart/form-data">
 			<input type="file" name="file" /> 
-			<input type="submit" value="提交"/>
+			<input type="submit" value="提交"/>d
 		</form>
 	</div>
 	<table>
