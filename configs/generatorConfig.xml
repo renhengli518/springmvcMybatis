@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+	<classPathEntry
+		location="C:\workspace\Home\WebContent\WEB-INF\lib\ojdbc14.jar" />
+	<context id="context1" defaultModelType="flat">
+		<commentGenerator>
+			<property name="suppressAllComments" value="true" /><!-- 是否取消注释 -->
+			<property name="suppressDate" value="false" /> <!-- 是否生成注释代时间戳 -->
+		</commentGenerator>
+		<jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver"
+			connectionURL="jdbc:oracle:thin:@10.1.50.10:1521:dev" userId="onlineclass4"
+			password="onlineclass4" />
+
+		<javaTypeResolver type="com.springstudy.JavaTypeResolverDefaultImpl">
+			<!-- 是否使用bigDecimal， false可自动转化以下类型（Long, Integer, Short, etc.） -->
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+
+		<javaModelGenerator targetPackage="com.springstudy.entity"	targetProject="study" />
+		<sqlMapGenerator targetPackage="com.springstudy.mapper"	targetProject="study" />
+		<javaClientGenerator targetPackage="com.springstudy.dao"	targetProject="study" type="XMLMAPPER" />
+
+		<table schema="" tableName="base_user" enableCountByExample="false"
+			enableUpdateByExample="false" enableDeleteByExample="false"
+			enableSelectByExample="false" selectByExampleQueryId="false">
+		</table>
+		
+	</context>
+</generatorConfiguration>

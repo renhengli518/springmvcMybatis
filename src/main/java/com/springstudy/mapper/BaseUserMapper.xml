@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.springstudy.dao.BaseUserMapper" >
+  <resultMap id="BaseResultMap" type="com.springstudy.entity.BaseUser" >
+    <id column="BASE_USER_ID" property="baseUserId" jdbcType="VARCHAR" />
+    <result column="BASE_AREA_ID" property="baseAreaId" jdbcType="VARCHAR" />
+    <result column="SCHOOL_ID" property="schoolId" jdbcType="VARCHAR" />
+    <result column="USERNAME" property="username" jdbcType="VARCHAR" />
+    <result column="PASSWORD" property="password" jdbcType="VARCHAR" />
+    <result column="REALNAME" property="realname" jdbcType="VARCHAR" />
+    <result column="USER_TYPE" property="userType" jdbcType="VARCHAR" />
+    <result column="ADMIN_FLAG" property="adminFlag" jdbcType="CHAR" />
+    <result column="PERM_GRANT" property="permGrant" jdbcType="VARCHAR" />
+    <result column="LOCKED" property="locked" jdbcType="CHAR" />
+    <result column="HEAD_PIC" property="headPic" jdbcType="VARCHAR" />
+    <result column="CREATE_TIME" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="CREATE_USER_ID" property="createUserId" jdbcType="VARCHAR" />
+    <result column="CREATE_USER_TYPE" property="createUserType" jdbcType="VARCHAR" />
+    <result column="CONTACT_PHONE" property="contactPhone" jdbcType="VARCHAR" />
+    <result column="REMARK" property="remark" jdbcType="VARCHAR" />
+    <result column="DELETE_FLAG" property="deleteFlag" jdbcType="CHAR" />
+    <result column="POSITION" property="position" jdbcType="VARCHAR" />
+    <result column="CREATE_EVA_FLAG" property="createEvaFlag" jdbcType="CHAR" />
+    <result column="REMEMBER_TAG" property="rememberTag" jdbcType="VARCHAR" />
+    <result column="REMEMBER_TIME" property="rememberTime" jdbcType="TIMESTAMP" />
+    <result column="EMAIL" property="email" jdbcType="VARCHAR" />
+    <result column="INTERACTIVE_LISTEN_FLAG" property="interactiveListenFlag" jdbcType="CHAR" />
+    <result column="GROUP_PREPARATION_FLAG" property="groupPreparationFlag" jdbcType="CHAR" />
+    <result column="VIDEO_CONFERENCE_FLAG" property="videoConferenceFlag" jdbcType="CHAR" />
+    <result column="BASE_CLASS_ID" property="baseClassId" jdbcType="VARCHAR" />
+    <result column="JOIN_YEAR" property="joinYear" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    BASE_USER_ID, BASE_AREA_ID, SCHOOL_ID, USERNAME, PASSWORD, REALNAME, USER_TYPE, ADMIN_FLAG, 
+    PERM_GRANT, LOCKED, HEAD_PIC, CREATE_TIME, CREATE_USER_ID, CREATE_USER_TYPE, CONTACT_PHONE, 
+    REMARK, DELETE_FLAG, POSITION, CREATE_EVA_FLAG, REMEMBER_TAG, REMEMBER_TIME, EMAIL, 
+    INTERACTIVE_LISTEN_FLAG, GROUP_PREPARATION_FLAG, VIDEO_CONFERENCE_FLAG, BASE_CLASS_ID, 
+    JOIN_YEAR
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from BASE_USER
+    where BASE_USER_ID = #{baseUserId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from BASE_USER
+    where BASE_USER_ID = #{baseUserId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.springstudy.entity.BaseUser" >
+    insert into BASE_USER (BASE_USER_ID, BASE_AREA_ID, SCHOOL_ID, 
+      USERNAME, PASSWORD, REALNAME, 
+      USER_TYPE, ADMIN_FLAG, PERM_GRANT, 
+      LOCKED, HEAD_PIC, CREATE_TIME, 
+      CREATE_USER_ID, CREATE_USER_TYPE, CONTACT_PHONE, 
+      REMARK, DELETE_FLAG, POSITION, 
+      CREATE_EVA_FLAG, REMEMBER_TAG, REMEMBER_TIME, 
+      EMAIL, INTERACTIVE_LISTEN_FLAG, GROUP_PREPARATION_FLAG, 
+      VIDEO_CONFERENCE_FLAG, BASE_CLASS_ID, JOIN_YEAR
+      )
+    values (#{baseUserId,jdbcType=VARCHAR}, #{baseAreaId,jdbcType=VARCHAR}, #{schoolId,jdbcType=VARCHAR}, 
+      #{username,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, #{realname,jdbcType=VARCHAR}, 
+      #{userType,jdbcType=VARCHAR}, #{adminFlag,jdbcType=CHAR}, #{permGrant,jdbcType=VARCHAR}, 
+      #{locked,jdbcType=CHAR}, #{headPic,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{createUserId,jdbcType=VARCHAR}, #{createUserType,jdbcType=VARCHAR}, #{contactPhone,jdbcType=VARCHAR}, 
+      #{remark,jdbcType=VARCHAR}, #{deleteFlag,jdbcType=CHAR}, #{position,jdbcType=VARCHAR}, 
+      #{createEvaFlag,jdbcType=CHAR}, #{rememberTag,jdbcType=VARCHAR}, #{rememberTime,jdbcType=TIMESTAMP}, 
+      #{email,jdbcType=VARCHAR}, #{interactiveListenFlag,jdbcType=CHAR}, #{groupPreparationFlag,jdbcType=CHAR}, 
+      #{videoConferenceFlag,jdbcType=CHAR}, #{baseClassId,jdbcType=VARCHAR}, #{joinYear,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.springstudy.entity.BaseUser" >
+    insert into BASE_USER
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="baseUserId != null" >
+        BASE_USER_ID,
+      </if>
+      <if test="baseAreaId != null" >
+        BASE_AREA_ID,
+      </if>
+      <if test="schoolId != null" >
+        SCHOOL_ID,
+      </if>
+      <if test="username != null" >
+        USERNAME,
+      </if>
+      <if test="password != null" >
+        PASSWORD,
+      </if>
+      <if test="realname != null" >
+        REALNAME,
+      </if>
+      <if test="userType != null" >
+        USER_TYPE,
+      </if>
+      <if test="adminFlag != null" >
+        ADMIN_FLAG,
+      </if>
+      <if test="permGrant != null" >
+        PERM_GRANT,
+      </if>
+      <if test="locked != null" >
+        LOCKED,
+      </if>
+      <if test="headPic != null" >
+        HEAD_PIC,
+      </if>
+      <if test="createTime != null" >
+        CREATE_TIME,
+      </if>
+      <if test="createUserId != null" >
+        CREATE_USER_ID,
+      </if>
+      <if test="createUserType != null" >
+        CREATE_USER_TYPE,
+      </if>
+      <if test="contactPhone != null" >
+        CONTACT_PHONE,
+      </if>
+      <if test="remark != null" >
+        REMARK,
+      </if>
+      <if test="deleteFlag != null" >
+        DELETE_FLAG,
+      </if>
+      <if test="position != null" >
+        POSITION,
+      </if>
+      <if test="createEvaFlag != null" >
+        CREATE_EVA_FLAG,
+      </if>
+      <if test="rememberTag != null" >
+        REMEMBER_TAG,
+      </if>
+      <if test="rememberTime != null" >
+        REMEMBER_TIME,
+      </if>
+      <if test="email != null" >
+        EMAIL,
+      </if>
+      <if test="interactiveListenFlag != null" >
+        INTERACTIVE_LISTEN_FLAG,
+      </if>
+      <if test="groupPreparationFlag != null" >
+        GROUP_PREPARATION_FLAG,
+      </if>
+      <if test="videoConferenceFlag != null" >
+        VIDEO_CONFERENCE_FLAG,
+      </if>
+      <if test="baseClassId != null" >
+        BASE_CLASS_ID,
+      </if>
+      <if test="joinYear != null" >
+        JOIN_YEAR,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="baseUserId != null" >
+        #{baseUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="baseAreaId != null" >
+        #{baseAreaId,jdbcType=VARCHAR},
+      </if>
+      <if test="schoolId != null" >
+        #{schoolId,jdbcType=VARCHAR},
+      </if>
+      <if test="username != null" >
+        #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null" >
+        #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="realname != null" >
+        #{realname,jdbcType=VARCHAR},
+      </if>
+      <if test="userType != null" >
+        #{userType,jdbcType=VARCHAR},
+      </if>
+      <if test="adminFlag != null" >
+        #{adminFlag,jdbcType=CHAR},
+      </if>
+      <if test="permGrant != null" >
+        #{permGrant,jdbcType=VARCHAR},
+      </if>
+      <if test="locked != null" >
+        #{locked,jdbcType=CHAR},
+      </if>
+      <if test="headPic != null" >
+        #{headPic,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createUserId != null" >
+        #{createUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="createUserType != null" >
+        #{createUserType,jdbcType=VARCHAR},
+      </if>
+      <if test="contactPhone != null" >
+        #{contactPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null" >
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="deleteFlag != null" >
+        #{deleteFlag,jdbcType=CHAR},
+      </if>
+      <if test="position != null" >
+        #{position,jdbcType=VARCHAR},
+      </if>
+      <if test="createEvaFlag != null" >
+        #{createEvaFlag,jdbcType=CHAR},
+      </if>
+      <if test="rememberTag != null" >
+        #{rememberTag,jdbcType=VARCHAR},
+      </if>
+      <if test="rememberTime != null" >
+        #{rememberTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="email != null" >
+        #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="interactiveListenFlag != null" >
+        #{interactiveListenFlag,jdbcType=CHAR},
+      </if>
+      <if test="groupPreparationFlag != null" >
+        #{groupPreparationFlag,jdbcType=CHAR},
+      </if>
+      <if test="videoConferenceFlag != null" >
+        #{videoConferenceFlag,jdbcType=CHAR},
+      </if>
+      <if test="baseClassId != null" >
+        #{baseClassId,jdbcType=VARCHAR},
+      </if>
+      <if test="joinYear != null" >
+        #{joinYear,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.springstudy.entity.BaseUser" >
+    update BASE_USER
+    <set >
+      <if test="baseAreaId != null" >
+        BASE_AREA_ID = #{baseAreaId,jdbcType=VARCHAR},
+      </if>
+      <if test="schoolId != null" >
+        SCHOOL_ID = #{schoolId,jdbcType=VARCHAR},
+      </if>
+      <if test="username != null" >
+        USERNAME = #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null" >
+        PASSWORD = #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="realname != null" >
+        REALNAME = #{realname,jdbcType=VARCHAR},
+      </if>
+      <if test="userType != null" >
+        USER_TYPE = #{userType,jdbcType=VARCHAR},
+      </if>
+      <if test="adminFlag != null" >
+        ADMIN_FLAG = #{adminFlag,jdbcType=CHAR},
+      </if>
+      <if test="permGrant != null" >
+        PERM_GRANT = #{permGrant,jdbcType=VARCHAR},
+      </if>
+      <if test="locked != null" >
+        LOCKED = #{locked,jdbcType=CHAR},
+      </if>
+      <if test="headPic != null" >
+        HEAD_PIC = #{headPic,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        CREATE_TIME = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createUserId != null" >
+        CREATE_USER_ID = #{createUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="createUserType != null" >
+        CREATE_USER_TYPE = #{createUserType,jdbcType=VARCHAR},
+      </if>
+      <if test="contactPhone != null" >
+        CONTACT_PHONE = #{contactPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null" >
+        REMARK = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="deleteFlag != null" >
+        DELETE_FLAG = #{deleteFlag,jdbcType=CHAR},
+      </if>
+      <if test="position != null" >
+        POSITION = #{position,jdbcType=VARCHAR},
+      </if>
+      <if test="createEvaFlag != null" >
+        CREATE_EVA_FLAG = #{createEvaFlag,jdbcType=CHAR},
+      </if>
+      <if test="rememberTag != null" >
+        REMEMBER_TAG = #{rememberTag,jdbcType=VARCHAR},
+      </if>
+      <if test="rememberTime != null" >
+        REMEMBER_TIME = #{rememberTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="email != null" >
+        EMAIL = #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="interactiveListenFlag != null" >
+        INTERACTIVE_LISTEN_FLAG = #{interactiveListenFlag,jdbcType=CHAR},
+      </if>
+      <if test="groupPreparationFlag != null" >
+        GROUP_PREPARATION_FLAG = #{groupPreparationFlag,jdbcType=CHAR},
+      </if>
+      <if test="videoConferenceFlag != null" >
+        VIDEO_CONFERENCE_FLAG = #{videoConferenceFlag,jdbcType=CHAR},
+      </if>
+      <if test="baseClassId != null" >
+        BASE_CLASS_ID = #{baseClassId,jdbcType=VARCHAR},
+      </if>
+      <if test="joinYear != null" >
+        JOIN_YEAR = #{joinYear,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where BASE_USER_ID = #{baseUserId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.springstudy.entity.BaseUser" >
+    update BASE_USER
+    set BASE_AREA_ID = #{baseAreaId,jdbcType=VARCHAR},
+      SCHOOL_ID = #{schoolId,jdbcType=VARCHAR},
+      USERNAME = #{username,jdbcType=VARCHAR},
+      PASSWORD = #{password,jdbcType=VARCHAR},
+      REALNAME = #{realname,jdbcType=VARCHAR},
+      USER_TYPE = #{userType,jdbcType=VARCHAR},
+      ADMIN_FLAG = #{adminFlag,jdbcType=CHAR},
+      PERM_GRANT = #{permGrant,jdbcType=VARCHAR},
+      LOCKED = #{locked,jdbcType=CHAR},
+      HEAD_PIC = #{headPic,jdbcType=VARCHAR},
+      CREATE_TIME = #{createTime,jdbcType=TIMESTAMP},
+      CREATE_USER_ID = #{createUserId,jdbcType=VARCHAR},
+      CREATE_USER_TYPE = #{createUserType,jdbcType=VARCHAR},
+      CONTACT_PHONE = #{contactPhone,jdbcType=VARCHAR},
+      REMARK = #{remark,jdbcType=VARCHAR},
+      DELETE_FLAG = #{deleteFlag,jdbcType=CHAR},
+      POSITION = #{position,jdbcType=VARCHAR},
+      CREATE_EVA_FLAG = #{createEvaFlag,jdbcType=CHAR},
+      REMEMBER_TAG = #{rememberTag,jdbcType=VARCHAR},
+      REMEMBER_TIME = #{rememberTime,jdbcType=TIMESTAMP},
+      EMAIL = #{email,jdbcType=VARCHAR},
+      INTERACTIVE_LISTEN_FLAG = #{interactiveListenFlag,jdbcType=CHAR},
+      GROUP_PREPARATION_FLAG = #{groupPreparationFlag,jdbcType=CHAR},
+      VIDEO_CONFERENCE_FLAG = #{videoConferenceFlag,jdbcType=CHAR},
+      BASE_CLASS_ID = #{baseClassId,jdbcType=VARCHAR},
+      JOIN_YEAR = #{joinYear,jdbcType=VARCHAR}
+    where BASE_USER_ID = #{baseUserId,jdbcType=VARCHAR}
+  </update>
+  
+   <select id="getAllUsers" resultMap="BaseResultMap"  >
+    select 
+    <include refid="Base_Column_List" />
+    from BASE_USER
+    where 1=1
+  </select>
+</mapper>
