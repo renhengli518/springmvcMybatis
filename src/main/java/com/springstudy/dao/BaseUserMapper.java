@@ -3,6 +3,7 @@ package com.springstudy.dao;
 import java.util.List;
 
 import com.springstudy.entity.BaseUser;
+import commons.page.Page;
 
 public interface BaseUserMapper {
     int deleteByPrimaryKey(String baseUserId);
@@ -18,4 +19,6 @@ public interface BaseUserMapper {
     int updateByPrimaryKey(BaseUser record);
     
     List<BaseUser> getAllUsers();
+    
+    List<BaseUser> getUserInfoPageList(Page page);
 }

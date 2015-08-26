@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.springstudy.dao.BaseUserMapper;
 import com.springstudy.entity.BaseUser;
+import commons.page.Page;
 
 /**
  * 
@@ -25,6 +26,12 @@ public class BaseUserService {
 	
 	public List<BaseUser> getAllUsers(){
 		return baseUserMapper.getAllUsers();
+	}
+	
+	public Page getUserInfoPageList(Page page){
+		List<BaseUser> list =  baseUserMapper.getUserInfoPageList(page);
+		page.setData(list);
+		return page;
 	}
 
 }

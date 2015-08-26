@@ -20,12 +20,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.springstudy.entity.BaseUser;
 import com.springstudy.service.BaseUserService;
 
+import commons.page.Page;
 import commons.utils.ResultJson;
 
 @Controller
@@ -104,4 +106,11 @@ public class HelloController {
 		logger.debug("File upload transferTo over");
 		return "userList";
 	}
+	
+	@RequestMapping("pageListDemo")
+	@ResponseBody
+	public Page pageListDemo(HttpServletRequest request, String createUserId, String resourceColumn,
+			Page page) {
+		return baseUserService.getUserInfoPageList(page);
+	} 
 }
