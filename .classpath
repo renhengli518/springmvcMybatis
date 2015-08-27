@@ -28,7 +28,6 @@
 	<classpathentry kind="lib" path="C:/软件盘/tomcat7.0/apache-tomcat-7.0.54/apache-tomcat-7.0.54/lib/jasper.jar"/>
 	<classpathentry kind="lib" path="C:/软件盘/tomcat7.0/apache-tomcat-7.0.54/apache-tomcat-7.0.54/lib/jasper-el.jar"/>
 	<classpathentry kind="lib" path="C:/软件盘/tomcat7.0/apache-tomcat-7.0.54/apache-tomcat-7.0.54/lib/jsp-api.jar"/>
-	<classpathentry kind="lib" path="C:/软件盘/tomcat7.0/apache-tomcat-7.0.54/apache-tomcat-7.0.54/lib/org.eclipse.jst.server.tomcat.runtime.70.loader.jar"/>
 	<classpathentry kind="lib" path="C:/软件盘/tomcat7.0/apache-tomcat-7.0.54/apache-tomcat-7.0.54/lib/servlet-api.jar"/>
 	<classpathentry kind="lib" path="C:/软件盘/tomcat7.0/apache-tomcat-7.0.54/apache-tomcat-7.0.54/lib/tomcat7-websocket.jar"/>
 	<classpathentry kind="lib" path="C:/软件盘/tomcat7.0/apache-tomcat-7.0.54/apache-tomcat-7.0.54/lib/tomcat-api.jar"/>

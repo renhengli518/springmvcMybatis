@@ -41,10 +41,16 @@
 		<property name="timeBetweenEvictionRunsMillis" value="${datasource.timeBetweenEvictionRunsMillis}" />
 	</bean>
 
+	<!-- mybatis文件 增加分页-->
+	<bean id="paginationInterceptor" class="commons.page.PagePlugin">
+	</bean>
 	<bean id="sessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
 		<property name="configLocation">
 			<value>classpath:mybatis-config.xml</value>
+		</property>
+		<property name="plugins">
+			<ref bean="paginationInterceptor" />
 		</property>
 		<property name="mapperLocations" value="classpath:com/springstudy/mapper/*.xml"></property>
 	</bean>

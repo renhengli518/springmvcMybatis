@@ -1,0 +1,245 @@
+@charset "utf-8";
+/* CSS Document */
+/*---------------空间页面表格样式-----------------*/
+*{margin:0;padding:0;}
+body{font-family: "微软雅黑";}
+h1,h2,h3,h4,h5,h6{font-weight: normal;}
+ul li{list-style: none;}
+i,em{font-style: normal;}
+a,img{border: none;text-decoration: none;}
+.clearfix:after {
+    clear: both;
+    content: "";
+    display: block;
+}
+/*---------------头部页面公共样式-----------------*/
+.header_dw2{border-bottom: none;}
+.title_wrap_p{overflow: hidden;float:left;width: 550px;}
+.logo_s{float:left;background:#fff;border:1px solid #ddd;width: 120px;height: 120px;overflow: hidden;padding:4px;}
+.title_s{float:left;margin-left: 20px;display: inline;}
+.space_fami .title_s{max-width:210px;overflow:hidden;}
+.title_s span{display: block;font-size: 24px;color: #333;}
+.title_s img{margin-left:15px;}
+.title_s i{font-size: 20px;}
+.title_s p{font-size: 16px;color:#444;padding:20px 5px 0px;}
+/*---------------我的应用模块样式开始-----------------*/
+.my_use{float:right;margin-top:20px;margin-right:8px;height: 106px;padding:0 5px;border: 1px solid #ddd;position: relative;color:#666;background:#fff;}
+.my_use p{width: 94px;height: 28px;line-height: 28px;background: #fff;font-size: 18px;position: absolute; text-align:center;left:14px;top:-18px;}
+.myuse_ul {margin-top:12px;}
+.myuse_li01{float: left;width: 110px;height: 84px;text-align: center;border-right:1px dotted #ddd;}
+.myuse_li01 img,.myuse_li02 img{display: inline-block;width: 50px;height: 50px;margin-top:8px;}
+.myuse_li01 span,.use_li_last span{display: block;height:24px;width:100%px;overflow:hidden;font-size: 14px;color:#666;}
+.myuse_ul .use_li_last{border-right:none;}
+.space_more0{padding:0 10px 10px;background: #fff;position: absolute;z-index:1050;right: 21px;right:22px\9;top:105px;display: none;box-shadow: 0 1px 3px 0px #666;}
+.more_block{display:inline-block;width: 78px;height: 94px;}
+.more_block:hover{box-shadow: 0 1px 3px 0px #666;}
+.clear_bgl{float:right;height:3px;width: 77px;margin-top:-3px;margin-right:-10px;background:#fff;}
+.Space_M{}
+.myuse_li02{float: left;width: 82px;height: 84px;text-align: center;}
+/*---------------我的应用模块样式结束-----------------*/
+/*---------------老师空间页面主体样式-----------------*/
+.space_main{width:1200px;margin:90px auto 20px;}
+.left_space{width:382px;float:left;min-height:1000px;}
+.right_space{width:780px;float:right;min-height:1000px;}
+.w400{width: 380px;height:394px;background:#ddd;margin-bottom:10px;}
+ul.easytabs{background:#f0f0f0;width:378px;height:45px;line-height: 45px;font-size: 16px;margin:0;padding:0;margin:1px;}
+.easytabs li{float:left;width:189px;height:45px;text-align: center;}
+.easytabs a{display:inline-block;color:#444;width:189px;height:44px;cursor:pointer;}
+.easytabs .easytab_active{display:inline-block;border-top:2px solid #7e532c;margin-top:-1px;text-align: center;font-weight: bold;background:#fff;color:#7e532c;}
+.left_class_list{display:none;}
+.spaceSchedule{width:378px;margin:0 1px 1px;}
+.spaceSchedule thead{background:#f6f6f6;}
+.gray_0{color:#AFAFAF;}
+.black_0{color:#3F3F3F;}
+.lessons_main{width:364px;margin:1px auto 30px;background:#fff;text-align: center;font-size: 14px;}
+.td_xuhao{width:16px;color:#c9c9c9;font-size: 12px;}
+.td-lesson{width:49px;height:36px;border-left:1px solid #ddd;position: relative;}
+.td-lesson i{display: inline-block;width: 47px;height:36px;line-height:36px;overflow:hidden;color:#e23434;border-bottom:1px solid #f6f6f6;vertical-align: bottom;}
+.block_0{position: absolute;top:14px;right:40px;overflow:hidden;height:40px;z-index: 98; display:block;}
+/*.block_0 .left_bge{background:url(../../img/workplace/block_01.png) 0 1px no-repeat; height:38px;width: 6px;float:left;}*/
+.block_0 span{/*background:url(../../img/workplace/block_02.png) 0 1px repeat-x;*/background:#F5F8FA;border-radius:3px;margin-right:9px;margin-left:2px;display:inline-block;box-shadow:-1px 2px 3px #ccc;white-space: nowrap;height:34px;line-height:34px;padding:0 10px 0 5px;font-size: 14px;color:#333;}
+.block_0 .right_bge{background:url(../../img/workplace/block_03.png) 0 1px no-repeat;float:right;height:38px;width: 9px;margin-top:-35px;margin-right:2px;}
+
+.class_con{clear:both;width:378px;height:370px;background:#fff;border:1px solid #ddd;margin-top:10px;margin-bottom:10px;}
+.class_con .class_h3{width:378px;height:45px;line-height: 45px;border-bottom:1px solid #ddd; border-top:2px solid #7e532c;margin-top:-1px;background:#f0f0f0;position: relative;}
+span.class_name{font-weight:bold;padding:0 10px;}
+.f_select{width: 135px;height:26px;line-height:26px;position: absolute;left:124px;top:12px;color:#7e532c;cursor:pointer;}
+.f_select p{width:120px;float:left;}
+.f_select ul{position: absolute;left:-5px;top:26px;width: 115px;line-height: 22px;background:#f6f6f6;border:1px solid #ddd;color:#7e532c;z-index: 105;padding:5px 0;border-top:2px solid #7e532c;}
+.f_select li{text-align: center;}
+.f_select span{float:right;display: inline-block;background: url(../../img/workplace/tip_bg.png) left center no-repeat;height:26px;width:10px;cursor: pointer;padding-right:5px;}
+.more_cl{position: absolute;right: 0;top:12px; background:url(../../img/workplace/more.png) left center no-repeat;display: inline-block;height:26px;width:10px;padding-right:5px;}
+.class_img{width:340px;margin:0 auto;}
+.class_img ul{width:364px;height:330px;margin-top:10px;}
+.class_img li{width:66px;height:66px;float:left;margin-right:25px;margin-bottom:12px;position: relative;}
+.class_img li i{position: absolute;left: 0;top:0;display: inline-block;background:#34a150;color:#fff;min-width: 34px;max-width:66px;overflow:hidden;height:18px;line-height:16px;font-size: 14px;text-align: center;}
+.class_img li span{position: absolute;left: 0;bottom: 0;height: 16px;background: #323232;line-height: 16px;color:#fff;display:inline-block;text-align:center;width: 66px;}
+.f_select2{height:22px;width:378px;background:#fff;border:1px solid #ddd;text-align:center;margin-top:-1px;position: relative;z-index: 100;cursor: pointer;}
+.f_select2 p{position: absolute;width: 115px;height:22px;line-height: 22px;top:0;left:120px;font-size: 14px;color:#7e532c;}
+.f_select2 ul{position: absolute;width: 115px;line-height: 22px;top:22px;background:#f6f6f6;border:1px solid #ddd;left:120px;font-size: 14px;color:#7e532c;z-index: 105;padding:5px 0;border-top:2px solid #7e532c;}
+.f_select2 span{position: absolute;top:0;left:235px;display: inline-block;background: url(../../img/workplace/tip_bg.png) left center no-repeat;height:26px;width:10px;cursor: pointer;padding-right:5px;} 
+.nr_title{width:720px;padding:0 30px;height:46px;line-height: 46px;background:#F0F0F0;border:1px solid #ddd;font-size:16px;}
+.nr_title a{display:inline-block;height:43px;padding:0 16px;margin-right:5px;color:#424242;}
+.nr_title a.h3_active{border-bottom:4px solid #e23434;font-weight: bold;}
+.sousuo_1{float:right;margin-top:10px;}
+.wb_text{float:left;display:inline-block;width:140px;padding-left:5px;height:19px;border:1px solid #ddd;border-right:none;}
+.ss_btn{float:left;display:inline-block;width: 42px;height: 26px;background: url(../../img/workplace/suosuo_bg.png) 0 0 no-repeat;border:none;}
+.Img_list{width:780px;border:1px solid #ddd;background:#fff;margin-top:10px;}
+.none_0{display:none;}
+.show{display: block;}
+.list_i{width:710px;margin:0 auto;overflow:hidden;padding:20px 0;}
+.list_i .images_1{float:left;}
+.list_i p{width:610px;float:right;}
+.images_bt,.images_bt:hover{color:#444;font-size:18px;float:left;padding-right:50px;}
+.img_bgwd{background:url(../../img/workplace/bg_icon.png) right -75px no-repeat;}
+.img_bgsp{background:url(../../img/workplace/bg_icon.png) right -115px no-repeat;}
+.images_time{float:right;font-size: 12px;color:#b8b8b8;}
+.images_pf{font-size: 14px;margin-right:15px;float: left;}
+.images_pf em{color:#e23434;}
+.page_yema{text-align: center;margin:50px;}
+.top_title .back_btn_t{float:right;background:#2dbe60;line-height:20px;color:#fff;margin-top:10px;margin-right:12px;}
+/*个人资料*/
+.gn-personalInfoTab{ width:268px;height:177px;border:1px solid #ddd; border-top:4px solid #7e532c;color:#444; margin-left:10px;background:#fff}
+.gn-personalInfoContent .commonUL .text{text-align:left; min-width:80px;width:100px}
+.gn-personalInfoContent .cont input{color:#557392;width:278px;font-size:14px;height:36px;line-height:36px; border:1px solid #e0e1e3; background:#f0f0f0;padding-left:15px;}
+.gn-personalInfoTab{min-height:200px}
+.gn-personalInfoTab .gn-infoTitle{ line-height:56px;height:56px;font-size:22px; border-bottom:1px solid #c9c9c9 }
+.gn-personalInfoTab .gn-tab{margin:13px 15px;}
+.gn-tab li{margin-top:10px}
+.gn-tab li a{display:block; ;color:#444;font-size:16px;padding-left:25px; line-height:32px; min-height:32px}
+.gn-tab li a.active,.gn-personalInfoTab li a:hover{background:#f4f8fb}
+.gn-personalInfoContent .gn-infoContent{display:none}
+.gn-personalInfoContent .gn-infoContent.show{display:block}
+.gn-personalInfoContent{background:#fff;width:908px; border:1px solid #ddd;padding:50px 0; background:#fff;min-height:130px;padding-bottom:0}
+.gn-infoWrap{ border-bottom:1px solid #ddd;padding-bottom:50px}
+.gn-personalInfoContent .gn-basciList{width:333px;  padding-left:25px;padding-right:60px;}
+.gn-personalInfoContent .gn-imgWrap{height:86px; border:1px solid #e0e1e3; display:inline-block;vertical-align:middle}
+.gn-personalInfoContent .gn-imgWrap img{display:block;width:86px;height:86px}
+.gn-basicTeachInfo{width:334px; padding-left:25px;padding-right:60px;border-left:1px solid #ddd;min-height:380px}
+.gn-infoDetailTitle{font-size:20px; color:#444; height:80px;line-height:80px;margin-bottom:20px}
+.gn-infoBox{border:1px solid #ddd;width:100%}
+.gn-infoBox th,.gn-infoBox td{height:34px;line-height:34px;}
+.gn-infoBox thead th{ color:#888; background:#f6f6f6; border-bottom:1px solid #ddd}
+.gn-infoBox tbody td{ color:#222; background:#f5f8fa; border-bottom:1px solid #e7e8e9}
+.gn-basicBtn{height:60px;line-height:60px; background: #f6f6f6}
+/*****************角色设置（家长）******************/
+.gn-bindedStu{margin-top:40px;padding-left:25px}
+.gn-bindedStu>h4{font-size:20px; height:40px;line-height:40px;;color:#444}
+.gn-bindedStu li{float:left; margin-right:55px; margin-top:20px}
+.gn-bindedStu .gn-left{border:1px solid #ddd;width:86px;height:86px; position:relative; margin-right:10px}
+.gn-bindedStu .gn-left img{width:86px;height:86px;}
+.gn-bindedStu .gn-unbind{display:block;color:#ff4400;position:absolute; left:5px;;bottom:0;}
+.gn-bindedStu .gn-right{ overflow:hidden;color:#444;float:right}
+.gn-right span{display:block}
+.gn-right .gn-stuName{font-size:20px;}
+.gn-right .gn-stuClass{ margin-top:10px;}
+.gn-bindBtn{display:block; border:1px solid #00b7ee;color:#00b7ee;text-align:center;width:292px;height:42px;line-height:42px; background:#fff;cursor:pointer;}
+.gn-basciList.gn-bingNewStu{width:500px}
+.gn-basciList.gn-bingNewStu li .cont{display:inline-block;}
+/*更改头像*/
+.gn-changePicWrap{padding:15px 50px}
+.gn-picPreview {height:140px}
+.gn-picPreview span{border:1px solid #ddd;display:inline-block;bottom:0}
+.gn-picPreview span img{display:block;width:100%;height:100%}
+.gn-picPreview .gn-pic120{width:120px;height:120px;left:0}
+.gn-picPreview .gn-pic80{width:80px;height:80px;left:140px}
+.gn-picPreview .gn-pic60{width:60px;height:60px;left:240px}
+/*更改密码*/
+.gn-changePassWrap{padding:20px 30px;}
+.gn-changepass .gn-passTip{ color:#aeaeae;font-size:12px}
+.gn-changePassList li *,.gn-basciList li *{vertical-align:middle}
+.gn-personalInfoContent .commonUL li{min-height:44px;line-height:44px;}
+.gn-personalInfoContent .btn{padding:5px 40px; border-bottom:1px solid #3e8a9e}
+.page_yema{text-align: center;margin:50px;}
+/****----------------------教师空间-班级----------------------****/
+.top_title{width:1200px;margin:90px auto 0;border: 1px solid #ddd;height:50px;background:#fff;line-height: 50px;}
+.top_title .title_bj{float:left;width:60px;height:50px;padding-left:10px;margin-left:15px;color: #000;font-size: 14px;}
+.top_title span{float:left;font-size: 16px;}
+.top_title a{margin-left:15px;color:#444;padding:5px 15px;}
+.top_title a:hover,.top_title .title_bj_visited,.top_title .title_bj_visited a{background:#2dbe60;color:#fff;}
+.space_kj_main{width: 1170px;margin:20px auto;}
+.kj_main_left{float:left;width:270px;min-height:700px;background:#fff;border:1px solid #ddd;}
+.main_teacher{width: 224px;margin:0 auto;overflow:hidden;padding-bottom:10px;}
+.ban_zr{border-bottom: 1px dotted #000;}
+.main_teacher h3{font-size: 22px;color:#230e0e;margin:5px 0 20px;height:50px;line-height:50px;}
+.teacher_info{overflow: hidden;width: 220px;margin:20px auto;}
+.teacher_info img{float:left;border:1px solid #a0a0a0;}
+.teacher_info .teach_name{float:right;width: 160px;color:#230e0e;}
+.teach_name i{display:inline-block;width:160px;line-height:20px;font-size:14px;}
+.teach_name span{font-size:12px;}
+.kj_main_right{float:right;padding-bottom:50px;width:878px;border: 1px solid #ddd;background:#fff;background:#fff;}
+.right_top_t{color:#444;height:30px;background:#f6f6f6;margin:8px 8px 20px;}
+.all_select_k{margin-left:56px;padding-top:4px;float:left;}
+.all_select_k input{margin-right: 5px;}
+.fl_right{float:right;}
+.xi_la_kuang{display:inline-block;height:26px;margin-top:3px;margin-right:26px;background:url(../../img/workplace/select_bg.png) right 0 no-repeat;position: relative;}
+.xi_la_kuang:hover{background:url(../../img/workplace/select_bg.png) right -28px no-repeat;}
+/*-------------------班级右侧悬浮筛选框样式-----------------*/
+.xfu_kuang{float:right;width:160px;margin-right: 12px;}
+.wen_zi_k{height:26px;line-height:24px;margin-bottom:-1px;background: url(../../img/workplace/bg_k02.png) 0 -1px no-repeat;position: relative;}
+.wen_zi_k_first{background: url(../../img/workplace/bg_k02.png) 0px 0px no-repeat;}
+.li_active_input{width:96px;border:none;margin-left:14px;}
+.wen_zik_visited{background: url(../../img/workplace/bg_k02.png) 0 -27px no-repeat;z-index: 1000;}
+.wen_zi_k i{margin-left: 14px;}
+.li_over{position: absolute;right:0;top:1px;height:24px;}
+.li_over a{display: inline-block;width: 16px;height:24px;}
+.bian_ji{background: url(../../img/workplace/tu2_b02.png) -1px center no-repeat;}
+.shan_chu{background: url(../../img/workplace/tu2_b02.png) -15px center no-repeat;}
+.submit_btn{border:none;background:#2dbe60;width:39px;height:26px;color:#fff;}
+.shu_ru_k{height:29px;background: url(../../img/workplace/bg_k03.png) 0px 0px no-repeat;position: relative;}
+.shu_ru_k input{margin-left: 14px;color:#d1d1d1;width:90px;font-family:"微软雅黑";border: none;line-height: 21px;}
+.add_tj{position: absolute;top:-1px;right:0px;color:#fff;width: 40px;line-height:30px;text-align:center;height: 30px;background:#2dbe60;}
+/*-------------------班级右侧悬浮筛选框样式-----------------*/
+.xz_text{background:none;border:none;width: 100px;height:16px;margin:2px 6px;font-family: "微软雅黑";}
+.list_limg{width: 650px;float:left;margin-left:35px;margin-top:40px;padding-bottom:40px;border-bottom: 1px dotted #ddd;}
+.list_limg_last{border-bottom:none;}
+.limg_li{width:310px;float:left;margin-left:15px;position: relative;}
+.fl_left{float:left;}
+.slect_img{margin-top:30px;margin-right:15px;}
+.sl_img_xx{margin-left:16px;margin-top:10px;}
+.sl_img_xx i{font-size:20px;color:#222;}
+.sel_ycy{z-index: 1001;border-top: none;border-left:1px solid #ddd;border-right:1px solid #ddd;border-bottom:1px solid #ddd;background:#fff;width:109px;position: absolute;right:0;top:24px; right: 1px;}
+.list_limg .sel_ycy li{line-height: 18px;padding-left:3px;width:106px;margin-left:0px;}
+.clear_li{clear:both;}
+.list_limg .sel_ycy li:hover,.xi_la_kuang .sel_ycy li:hover{background:#2dbe60;color:#fff;cursor: pointer;}
+/*--------------------空间更多--访客页面样式------------------------*/
+.all_student_t{font-size: 18px;line-height: 30px;margin-left: 56px;}
+.student_list{width:740px;margin:0 auto 10px;border-bottom: 1px dotted #ddd;}
+.student_list_last{border-bottom:none;}
+.s_list_img{float:left;width: 100px;margin-right:28px;text-align: center;position: relative;}
+.s_list_img  .stud_name{display: block;color:#222;width: 100%;font-size:20px;overflow:hidden;height:36px;line-height:30px;}
+
+.margin_right0{margin-right:0px;}
+.family_xx{background:#fff;border-top:2px solid #2dbe60;position: absolute;z-index: 200;top:80px;left:-60px;min-width:408px;box-shadow: 0 2px 4px 0 #ddd;padding-bottom: 20px;}
+
+.limg_li .family_xx{left:-45px;}
+
+.family_xx i{background: url(../../img/workplace/top_green_bg.png) 0 0 no-repeat;width: 29px;height: 7px;float:left;margin-top:-9px;margin-left:95px;}
+.family_h{float:left;line-height: 52px;margin:26px 10px 26px 22px;}
+.family_tx{float:left;margin-top: 26px;height:52px;line-height: 52px;color:#222;}
+.z_family_tx{float:right;width:300px;}
+.family_tx img{float:left;overflow: hidden;}
+.family_tx em{float:right;line-height: 52px;padding:0 20px 0 5px;}
+.all_student_t{font-size: 18px;line-height: 30px;margin-left: 56px;}
+/*--------------------家长空间页面样式------------------------*/
+/*.space_fami_stu .header_up_wrap{background:#2dbe60;}*/
+.space_fami_stu .nav_item:hover{color:#fff;}
+.space_fami_stu .header_up_inner_wrap ._header .header_item_nav .nav .nav_item_clicked{border-left:1px solid #34a150;color:#fff;}
+/*.space_fami_stu .header_up_inner_wrap ._header .header_item_search{border-left:1px solid #34a150;border-right:1px solid #34a150; }
+.space_fami_stu .header_up_inner_wrap ._header .header_item_quit{border-left:1px solid #34a150;border-right:1px solid #34a150; }*/
+.space_fami_stu .my_use{font-weight:bold;}
+.space_fami_stu .title_wrap_p,.space_fami .title_wrap_p{width: 730px;}
+.title_s_fami span{margin-top:34px;}
+.logo_s_02{width: 60px;height: 60px;margin-top:32px;margin-left:70px;}
+.title_s_stu span{font-size: 20px;margin-top:39px;}
+.title_s_stu i{font-size:14px;}
+/*--------------------学生空间页面样式------------------------*/
+.title_stu i{line-height: 40px;}
+.nr_title a.h3_active{border-bottom:4px solid #3399cc;font-weight: bold;}
+.ss_btn02{background: url(../../img/workplace/suosuo_bg_green.png) 0 0 no-repeat;}
+.easytabs_stu li{width: 100%;}
+.easytabs_stu a{display:inline-block;color:#444;width:358px;padding-left:20px;height:42px;cursor:pointer;}
+.class_kj_stu .easytab_active{border-top:3px solid #2dbe60;background: #f0f0f0;color:#444;text-align: left;}
+.class_kj_stu .td-lesson i{color:#444;}
+.class_con_stu .class_name{padding:0 20px;font-size:16px;color:#444;}
+.class_con_stu .class_h3{ border-top:3px solid #2dbe60;margin-top:-1px;}
