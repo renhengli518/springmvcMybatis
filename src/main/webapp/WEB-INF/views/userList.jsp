@@ -17,6 +17,10 @@
 <script src="${root}/static/js/splitpage.js" type="text/javascript"></script>
 <script src="${root }/static/js/extend.js" type="text/javascript"></script>
 <script src="${root }/static/js/common.js" type="text/javascript"></script>
+<script src="${root }/static/ueditor/ueditor.config.js" type="text/javascript"></script>
+<script src="${root }/static/ueditor/ueditor.all.js" type="text/javascript" ></script>
+<script src="${root }/static/ueditor/ueditor.parse.js" type="text/javascript" ></script>
+<link media="all" type="text/css" rel="stylesheet" href="${root}/static/ueditor/themes/default/css/ueditor.css" />
 <link media="all" type="text/css" rel="stylesheet" href="${root}/static/css/reset.css" />
 <link media="all" type="text/css" rel="stylesheet" href="${root}/static/css/resetUE.css" />
 <link media="all" type="text/css" rel="stylesheet" href="${root}/static/css/workplace.css" />
@@ -55,8 +59,27 @@
 				</c:forEach>
 			</tbody>
 		</table>
-		<div id="noData"></div>
-		<div class="page_yema" id="pageNavi"></div>
+		<div id="noData">
+		
+		</div>
+		
+		<div class="page_yema" id="pageNavi">
+		
+		</div>
+		<!-- <div id="editor">
+		
+		</div> -->
+		<script id="container" type="text/plain" style="width:1024px;height:500px;">
+		
+		</script>
+		
+		<script type="text/javascript">
+			//实例化编辑器
+			var ue =  window.UE.getEditor("container", {});
+		   /*  var ue = UE.getEditor('container',{onready:function(){//创建一个编辑器实例
+			           this.setContent('hello');
+			  }}); */
+		</script>
 	</div>
 
 </body>
@@ -65,7 +88,7 @@
 
 	});
 
-	function pageList() {
+ 	function pageList() {
 		config = {
 			node : $id("pageNavi"),
 			url : "pageListDemo.do",
@@ -93,6 +116,6 @@
 			$("#noData").text("没查到数据");
 		}
 		$("table tbody").append(html);
-	};
+	}; 
 </script>
 </html>
