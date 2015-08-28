@@ -1,0 +1,32 @@
+When you check out this project.Maybe you will find it has some problems.But dou't be afraid.Beacuse every problem also 
+has it's due method.Now i will give you some problems you will find.Just do this below.
+1.First,you should modify the jdbc.properties,because this is my config.You should connect your own datasource.But this
+project i use oracle.
+  so , it maybe has a problem, as oracle ojdbc14-10.2.0.4.0.jar has not give the right to maven. so we should download it.
+Do like this below:  
+  1.download ojdbc14.jar then rename it as "ojdbc14-10.2.0.4.0.jar";
+  2. open cmd and run : mvn install:install-file -DgroupId=com.oracle -DartifactId=ojdbc14 -Dversion=10.2.0.4.0 -
+        Dpackaging=jar -Dfile=ojdbc14-10.2.0.4.0.jar
+  3.copy ojdbc14-10.2.0.4.0.jar to C:\Users\renhengli\.m2\repository\com\oracle\ojdbc14\10.2.0.4.0(this is your maven 
+    repository)
+  4.open pom.xml and add this code:
+      <dependency>
+        <groupId>com.oracle</groupId>
+        <artifactId>ojdbc14</artifactId>
+        <version>10.2.0.4.0</version>
+      </dependency> 
+  Now this problem may be resolved.
+  
+  If you use mysql database. you will do this :
+  open pom.xml and add this code :
+    <!-- MySql 5.5 Connector -->   
+    <dependency>
+        <groupId>mysql</groupId>
+        <artifactId>mysql-connector-java</artifactId>
+        <version>5.1.15-bin</version>
+    </dependency> 
+    
+At last , i want to tell you , may be it will has new problem in your local environment.Just do it,
+this i will not display all.
+
+Thank you ! Good Luck!
