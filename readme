@@ -30,3 +30,26 @@ At last , i want to tell you , may be it will has new problem in your local envi
 this i will not display all.
 
 Thank you ! Good Luck!
+
+Below,i will tell you  how to use baidu ueditor.
+1.download baidu ueditor from http://ueditor.baidu.com/.
+2.copy ueditor->jsp->lib->json.jar and ueditor-1.1.1.jar to WEB-INF->lib
+3.open pom.xml , add this code :
+		<dependency>  
+             <groupId> com.baidu.ueditor </groupId>  
+             <artifactId> ueditor </artifactId>  
+             <version> 1.1.1 </version >  
+             <scope> system </scope >  
+             <systemPath> ${basedir}/src/main/webapp/WEB-INF/lib/ueditor-1.1.1.jar </systemPath>  
+         </dependency> 
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20141113</version>
+            <scope> system </scope >  
+            <systemPath> ${basedir}/src/main/webapp/WEB-INF/lib/json.jar </systemPath>  
+		</dependency>
+4.modify ueditor->jsp->config.json:
+	"imageUrlPrefix": "/study", /* 图片访问路径前缀 */ 		
+	
+	
