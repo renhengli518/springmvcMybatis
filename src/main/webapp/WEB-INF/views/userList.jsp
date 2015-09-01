@@ -69,16 +69,23 @@
 		<!-- <div id="editor">
 		
 		</div> -->
-		<script id="container" type="text/plain" style="width:1024px;height:500px;">
 		
-		</script>
+		<form method="post" id="ueditorForm" action="getUeditorForm.html">
+			<script id="container" type="text/plain" name="ueditor" style="width:1024px;height:500px;">
 		
+			</script>
+			<input type="submit" value="提交" />
+		</form>
 		<script type="text/javascript">
 			//实例化编辑器
 			var ue =  window.UE.getEditor("container", {});
 		   /*  var ue = UE.getEditor('container',{onready:function(){//创建一个编辑器实例
 			           this.setContent('hello');
 			  }}); */
+			  
+			/*   function getContent(){
+					alert(ue.getContentTxt());
+				} */
 		</script>
 	</div>
 
@@ -117,5 +124,7 @@
 		}
 		$("table tbody").append(html);
 	}; 
+	
+	
 </script>
 </html>

@@ -113,4 +113,11 @@ public class HelloController {
 			Page page) {
 		return baseUserService.getUserInfoPageList(page);
 	} 
+	
+	@RequestMapping("getUeditorForm")
+	public String getUeditorForm(HttpServletRequest request, String ueditor){
+		System.out.println("----------editor---------------:"+ueditor);
+		return "userList";
+	}
+	
 }
