@@ -52,4 +52,8 @@ Below,i will tell you  how to use baidu ueditor.
 4.modify ueditor->jsp->config.json:
 	"imageUrlPrefix": "/study", /* 图片访问路径前缀 */ 		
 	
+2015-09-02 add json convert
+This version i add some demo about json convert to other type.You can see the file "test.java".
+	
+	
 	
