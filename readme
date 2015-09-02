@@ -53,7 +53,16 @@ Below,i will tell you  how to use baidu ueditor.
 	"imageUrlPrefix": "/study", /* 图片访问路径前缀 */ 		
 	
 2015-09-02 add json convert
+
 This version i add some demo about json convert to other type.You can see the file "test.java".
+During xml convert to json and json convert to xml , we should add new jar xom.jar.
+you can add this code below to pom.xml:
+	<!-- json xml 转换 --> 
+	<dependency>
+		<groupId>xom</groupId>
+		<artifactId>xom</artifactId>
+		<version>1.2.5</version>
+	</dependency>
 	
 	
 	
