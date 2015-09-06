@@ -1,5 +1,12 @@
 package study;
 
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+
+import org.codehaus.jackson.JsonNode;
+import org.codehaus.jackson.map.ObjectMapper;
+
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.springstudy.entity.User;
@@ -33,6 +40,29 @@ public class TestFastJson {
 		//将javabean 对象转成json对象
 		JSONObject json2 = (JSONObject) JSON.toJSON(user1);
 		System.out.println(json2);
+		
+		//map转json
+		Map<String, String> hashMap = new HashMap<String, String>();  
+		  hashMap.put("name", "zhang");  
+		  hashMap.put("sex", "1");  
+		  hashMap.put("login", "Jack");  
+		  hashMap.put("password", "123abc");  
+		  
+		  try  
+		  {  
+		    ObjectMapper objectMapper = new ObjectMapper();  
+		    String userMapJson = objectMapper.writeValueAsString(hashMap);  
+		  
+		    JsonNode node = objectMapper.readTree(userMapJson);  
+		  
+		    // 输出结果转意，输出正确的信息  
+		    System.out.println(node.get("password").asText());  
+		    // 输出不转意,输出结果会包含""，这是不正确的，除非作为json传递，如果是输出结果值，必须如上一行的操作  
+		    System.out.println(node.get("name"));  
+		  }  
+		  catch (IOException e)  
+		  {  
+		  }  
 		
 		
 	}
