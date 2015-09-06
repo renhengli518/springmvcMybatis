@@ -1,7 +1,10 @@
 package study;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -35,16 +38,16 @@ public class Test {
 	}
 
 	@SuppressWarnings({ "unchecked", "rawtypes" })
-	public static void main(String[] args) {
+	public static void main(String[] args) throws ParseException {
 		String str = "{'a':'1','b':'2','c':'3'}";
 		// Object t = JsonUtil.fromJson(str, null);
 		Object t = JSONObject.toBean(JSONObject.fromObject(str));
 		JSONObject obj = JSONObject.fromObject(t);
-		Set<?> set = obj.keySet();
+		Set set = obj.keySet();
 		for (Object key : set) {
 			System.out.println(obj.get(key));
 		}
-		System.err.println(obj.toString());
+		System.out.println(obj.toString());
 		// 把带有日期的user对象转成json 字符串
 		User user = new User();
 		user.setName("zhangsan");
@@ -52,7 +55,23 @@ public class Test {
 		JSONObject s = JSONObject.fromObject(user);
 		System.out.println("======================" + s.getJSONObject("date").toString());
 		System.out.println("======================" + s.get("date").toString());
-
+		
+		//将对象转成json 字符串中带有日期的字符串格式化输出 方法一
+		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");  
+		Object time1 =JSONObject.fromObject(s.get("date")).get("time");
+		Date date = new Date(Long.valueOf(time1.toString()));
+		String date1 = format.format(new Date(date.getTime()));
+		System.out.println(date1);
+		
+		//将对象转成json 字符串中带有日期的字符串格式化输出 方法二
+		Object time =JSONObject.fromObject(s.get("date")).get("time");
+		long sd=Long.valueOf(time.toString());  
+        Date dat=new Date(sd);  
+        GregorianCalendar gc = new GregorianCalendar();   
+        gc.setTime(dat);  
+        String sb=format.format(gc.getTime());  
+        System.out.println(sb);  
+		
 		// 把带有日期的json字符串反转成user对象
 		JSONObject y = JSONObject.fromObject(s.toString());
 		User x = (User) JSONObject.toBean(y, User.class);
