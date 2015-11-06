@@ -183,7 +183,7 @@ public class Test {
 		list.add(user1);
 		list.add(user2);
 		JSONArray _jsonArray = JSONArray.fromObject(list);
-		System.out.println(_jsonArray);
+		System.out.println("List转json字符串:"+_jsonArray);
 
 		// json字符串转List
 		List list1 = new ArrayList();

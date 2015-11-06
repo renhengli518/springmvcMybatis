@@ -26,7 +26,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.springstudy.entity.BaseUser;
 import com.springstudy.service.BaseUserService;
-
 import commons.page.Page;
 import commons.utils.ResultJson;
 
@@ -97,8 +96,10 @@ public class HelloController {
 					}
 				}
 				index++;
+				in.close();
 			}
 		} catch (Exception e) {
+			in.close();
 			e.printStackTrace();
 		}
 		ResultJson json = new ResultJson(true, 0, file.getName());
