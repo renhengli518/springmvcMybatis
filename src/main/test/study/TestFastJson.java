@@ -2,7 +2,9 @@ package study;
 
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
+import java.util.Map.Entry;
 
 import org.codehaus.jackson.JsonNode;
 import org.codehaus.jackson.map.ObjectMapper;
@@ -24,6 +26,8 @@ public class TestFastJson {
 		JSONObject json1 = JSON.parseObject(test);
 		System.out.println(json);
 		System.out.println(json1);
+		System.out.println(json1==json);
+		System.out.println(json1.equals(json));
 
 		// 将json对象转成javabean
 		User user = JSON.toJavaObject(json1, User.class);
@@ -47,6 +51,11 @@ public class TestFastJson {
 		hashMap.put("sex", "1");
 		hashMap.put("login", "Jack");
 		hashMap.put("password", "123abc");
+		Iterator<Map.Entry<String, String>> it = hashMap.entrySet().iterator();
+		while(it.hasNext()){
+			Entry<String, String> s = it.next();
+			System.out.println(s.getKey()+":"+s.getValue());
+		}
 
 		try {
 			ObjectMapper objectMapper = new ObjectMapper();
